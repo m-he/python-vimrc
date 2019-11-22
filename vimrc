@@ -50,6 +50,15 @@ call vundle#begin()
     "-------------------=== Python  ===-----------------------------
     Plugin 'python-mode/python-mode'            " Python mode (docs, refactor, lints...)
     Plugin 'vim-syntastic/syntastic'            " Syntax checking plugin for Vim
+ 
+    "-------------------=== Auto formating from Google  ===-----------------------------
+    " Add maktaba and codefmt to the runtimepath.
+    " (The latter must be installed before it can be used.)
+    Plugin 'google/vim-maktaba'
+    Plugin 'google/vim-codefmt'
+    " Also add Glaive, which is used to configure codefmt's maktaba flags. See
+    " `:help :Glaive` for usage.
+    Plugin 'google/vim-glaive'
 
 call vundle#end()                           " required
 filetype on
@@ -256,3 +265,17 @@ inoremap <expr> <CR> pumvisible() ? "<C-R>=<SID>ExpandSnippetOrReturn()<CR>" : "
 
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
+
+augroup autoformat_settings
+  autocmd FileType bzl AutoFormatBuffer buildifier
+  autocmd FileType c,cpp,proto,javascript AutoFormatBuffer clang-format
+  autocmd FileType dart AutoFormatBuffer dartfmt
+  autocmd FileType go AutoFormatBuffer gofmt
+  autocmd FileType gn AutoFormatBuffer gn
+  autocmd FileType html,css,sass,scss,less,json AutoFormatBuffer js-beautify
+  autocmd FileType java AutoFormatBuffer google-java-format
+  autocmd FileType python AutoFormatBuffer yapf
+  " Alternative: autocmd FileType python AutoFormatBuffer autopep8
+  autocmd FileType rust AutoFormatBuffer rustfmt
+  autocmd FileType vue AutoFormatBuffer prettier
+augroup END
