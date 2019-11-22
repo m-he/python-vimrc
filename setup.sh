@@ -87,4 +87,4 @@ echo "${NORMAL}"
 }
 
 wrapper
-vim +PluginInstall
+vim +PluginInstall +qall
