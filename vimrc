@@ -48,7 +48,7 @@ call vundle#begin()
     Plugin 'Valloric/YouCompleteMe'             " Autocomplete plugin
 
     "-------------------=== Python  ===-----------------------------
-    Plugin 'klen/python-mode'                   " Python mode (docs, refactor, lints...)
+    Plugin 'python-mode/python-mode'            " Python mode (docs, refactor, lints...)
     Plugin 'vim-syntastic/syntastic'            " Syntax checking plugin for Vim
 
 call vundle#end()                           " required
