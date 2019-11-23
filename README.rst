@@ -9,7 +9,7 @@ Keep calm and use VIM!
 Requirements
 ------------
 
-- VIM 7.4
+- VIM 8.1+
 - git
 - bash 3.2+
 
