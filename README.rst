@@ -46,7 +46,7 @@ this:
 
 .. code-block:: bash
 
-  ~/.vim/bundle/YouCompleteMe/install.py --clang-completer
+  ~/.vim/bundle/YouCompleteMe/install.py
 
 
 Key bindings
