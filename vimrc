@@ -128,7 +128,7 @@ let g:airline_theme='badwolf'
 let g:airline#extensions#tabline#enabled=1
 let g:airline#extensions#tabline#formatter='unique_tail'
 let g:airline_powerline_fonts=1
-set guifont=Source\ Code\ Pro\ for\ Powerline\ Medium\ 10
+set guifont=Source\ Code\ Pro\ for\ Powerline\ Medium\ 11
 
 "=====================================================
 "" TagBar settings
@@ -138,7 +138,7 @@ let g:tagbar_width=30
 autocmd BufEnter *.py :call tagbar#autoopen(0)
 autocmd BufWinLeave *.py :TagbarClose
 autocmd BufEnter __run__,__doc__ :wincmd H
-autocmd BufEnter __run__,__doc__ :vertical resize 80
+autocmd BufEnter __run__,__doc__ :vertical resize 59
 autocmd FileType help :wincmd H
 autocmd FileType help :vertical resize 80
 
