@@ -149,7 +149,7 @@ nmap " :NERDTreeToggle<CR>
 "=====================================================
 "" UltiSnips settings
 "=====================================================
-let g:ultisnips_python_style="sphinx"
+let g:ultisnips_python_style="google"
 
 "=====================================================
 "" Riv.vim settings
