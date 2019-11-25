@@ -70,6 +70,7 @@ filetype plugin indent on
 "" General settings
 "=====================================================
 syntax enable                               " syntax highlight
+set splitbelow                              " new split window at the bootm
 
 set t_Co=256                                " set 256 colors
 colorscheme wombat256mod                    " set color scheme
