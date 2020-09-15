@@ -26,7 +26,6 @@ call vundle#begin()
     "-------------------=== Code/Project navigation ===-------------
     Plugin 'scrooloose/nerdtree'                " Project and file navigation
     Plugin 'majutsushi/tagbar'                  " Class/module browser
-    Plugin 'kien/ctrlp.vim'                     " Fast transitions on project files
 
     "-------------------=== Other ===-------------------------------
     Plugin 'vim-airline/vim-airline'                  " Lean & mean status/tabline for vim
@@ -162,11 +161,6 @@ let g:ultisnips_python_style="google"
 let g:riv_disable_folding=1
 
 "=====================================================
-"" CtrlP settings
-"=====================================================
-nmap <C-Space> :CtrlPBuffer<CR>
-
-"=====================================================
 "" Python settings
 "=====================================================
 
@@ -291,3 +285,5 @@ augroup autoformat_settings
   autocmd FileType rust AutoFormatBuffer rustfmt
   autocmd FileType vue AutoFormatBuffer prettier
 augroup END
+
+set wildchar=<Tab> wildmenu wildmode=full
