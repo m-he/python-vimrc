@@ -135,6 +135,7 @@ set guifont=Source\ Code\ Pro\ for\ Powerline\ Medium\ 11
 "=====================================================
 let g:tagbar_autofocus=0
 let g:tagbar_width=30
+nmap <F8> :TagbarToggle<CR>
 autocmd BufEnter *.py :call tagbar#autoopen(0)
 autocmd BufWinLeave *.py :TagbarClose
 autocmd BufEnter __run__,__doc__ :wincmd H
@@ -148,7 +149,7 @@ autocmd FileType help :vertical resize 80
 let NERDTreeIgnore=['\.pyc$', '\.pyo$', '__pycache__$']     " Ignore files in NERDTree
 let NERDTreeWinSize=40
 autocmd VimEnter * if !argc() | NERDTree | endif  " Load NERDTree only if vim is run without arguments
-nmap " :NERDTreeToggle<CR>
+map <C-n> :NERDTreeToggle<CR>
 
 "=====================================================
 "" UltiSnips settings
